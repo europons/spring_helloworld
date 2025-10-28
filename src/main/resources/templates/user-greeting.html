@@ -6,8 +6,22 @@
     </head>
     <body>
         <h1 th:text="${message}">Mensaje por defecto que no se verá</h1>
-        <h2>Datos del Usuario:</h2>
-        <p><strong>Nombre:</strong> <span th:text="${userObject.name}">Nombre aquí</span></p>
-        <p><strong>Correo:</strong> <span th:text="${userObject.email}">Correo aquí</span></p>
+        <div th:if="${userObject3 != null}">
+            <h2>Usuario:</h2>
+            <p>Nombre: <span th:text="${userObject3.name}"></span></p>
+            <p>Correo: <span th:text="${userObject3.email}"></span></p>
+        </div>
+
+        <div th:if="${userObject != null}">
+            <h2>Usuario 1:</h2>
+            <p>Nombre: <span th:text="${userObject.name}"></span></p>
+            <p>Correo: <span th:text="${userObject.email}"></span></p>
+        </div>
+
+        <div th:if="${userObject2 != null}">
+            <h2>Usuario 2:</h2>
+            <p>Nombre: <span th:text="${userObject2.name}"></span></p>
+            <p>Correo: <span th:text="${userObject2.email}"></span></p>
+        </div>
     </body>
 </html>
