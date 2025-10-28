@@ -10,7 +10,7 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String userGreeting(Model model) { // Nombre del controlador
         model.addAttribute("message", "¡Bienvenido!"); // Envíamos un String message a la plantilla
-        User userObject = new User("Ximo", "Ximo@example.com"); // Accedemos al modelo para crear un objeto
+        User userObject = new User("Javi", "javi@example.com"); // Accedemos al modelo para crear un objeto
         model.addAttribute("userObject", userObject); // Envíamos un objeto a la plantilla
         return "user-greeting"; // Plantilla que utilizará este controlador
     }
